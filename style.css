@@ -8,6 +8,19 @@ body {
     align-items: center;
     overflow: hidden;
 }
+.title {
+    font-size: 2em;
+    color: #eb138d; 
+    text-align: center;
+    margin-bottom: 4em;
+    position: relative;
+    top: -1em; 
+    font-family: "likely", sans-serif;
+font-weight: 400;
+font-size: 40px;
+font-style: normal;
+}
+
 
 .container{
     display: flex;
@@ -19,11 +32,11 @@ body {
 .pumpkin{
     height: 11em;
     width:15em;
-    background:linear-gradient(to bottom, #000000 50%, rgb(248, 123, 229) 50%);
+    background:linear-gradient(to bottom, #000000 50%, rgb(238, 134, 207) 50%);
     border: 0.4em solid #000000;
     border-radius:  70%/110%;
     position: relative;
-    box-shadow: inset 0 0 20px #000000, 0 0 30px -4px rgb(0, 0, 0);
+    box-shadow: inset 0 0 10px #fff2f2, 0 0 30px -4px rgb(137, 48, 116);
     z-index: 1;   
     animation: float 3s infinite;
 }
@@ -70,7 +83,7 @@ body {
 .pumpkin .polka-dot.dot6 { top: 5.5em; right: 1em; }
 .pumpkin .polka-dot.dot7 { top: 6.5em; right: 4em; }
 
-
+/*start bow*/
 .pumpkin .bow {
     position: absolute;
     top: -3em; 
@@ -105,7 +118,7 @@ body {
 .pumpkin .bow .loop.right {
     transform: rotate(50deg);
 }
-
+/*end of bow*/
 
 .pumpkin .root{
     background:#517f54;
@@ -122,28 +135,23 @@ body {
 
 .pumpkin .eye {
     position: absolute;
-    width:0;
-    height:0;
-    border-top: 0.8em solid transparent;
-    top: 2.8em;
+    width: 2em;
+    height: 4em; 
+    background-color: #ffffff; 
+    border-radius: 100%;
+    top:2em;
 }
 
-.pumpkin .eye.right{
-    right: 3.7em;
-    border-left: 2.4em solid #401b03;
-    border-bottom: 2.1em solid transparent;
-    transform: rotate(30deg);
+.pumpkin .eye.left {
+    left: 4.5em;
 }
 
-.pumpkin .eye.left{
-    left: 3.7em;
-    transform: rotate(-30deg);
-    border-bottom: 2.1em solid transparent;
-    border-right: 2.4em solid #401b03;
+.pumpkin .eye.right {
+    right: 4.5em;
 }
 
 .pumpkin .mouth{
-    border-bottom: 1em solid #401b03;
+    border-bottom: 1em solid #ffffff;
     position: absolute;
      width: 4em;
      height: 2em;
@@ -156,14 +164,14 @@ body {
 }
 
 .pumpkin .mouth.left{
-    left: 3.6em;
+    left: 3.8em;
     border-radius:0 0 0 100%;
 } 
 
 .pumpkin .teeth{
-    border-left: 0.8em solid #401b03;
+    border-left: 0.em solid #ffffff;
     border-bottom: 0 solid transparent;
-    border-top: 0.8em solid transparent;
+    border-top: 0.1 solid transparent;
     width: 0.5em;
     height: 1em;
     position: absolute;
@@ -181,45 +189,29 @@ height: 0;
 border-top: 0.8em solid transparent;
 }
 
-.pumpkin .teeth::before{
-    right: 2.2em;
-    top: -0.65em;
-    transform: rotate(30deg);
-    border-bottom: 0.5em solid transparent;
-    border-left: 1em solid #401b03;
-}
-
-.pumpkin .teeth::after{
-    left: 1em;
-    top: -0.65em;
-    transform: rotate(30deg);
-    border-bottom: 0.5em solid transparent;
-    border-left: 1em solid #401b03;
-}
-
-.shadown{
+.shadow{
     margin: 10% auto 0;
     background: #000;
     width: 230px;
     height: 50px;
     border-radius:50%;
-    animation: zoom 3s infinite;
+    animation: zoom 4s infinite;
 }
 
 @keyframes float{
     0%, 100% {
-        transform: translateY(0);
+        transform: translateY(1);
     }
     50%{
-        transform: translateY(-10%);
+        transform: translateY(-20%);
     }
 }
 
 @keyframes zoom{
     0%, 100%{
-        transform: scale(1);
+        transform: scale(1.2);
     }
     50%{
-        transform: scale(0.8);
+        transform: scale(0.5);
     }
 }
